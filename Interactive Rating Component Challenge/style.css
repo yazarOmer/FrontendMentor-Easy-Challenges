@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+:root {
+    /* colors */
+
+        /* primary */
+        --orange: hsl(25, 97%, 53%);
+
+        /* secondary */
+        --white: hsl(0, 0%, 100%);
+        --Light-grey: hsl(217, 12%, 63%);
+        --medium-grey: hsl(216, 12%, 54%);
+        --secondary-medium-grey: hsl(216, 12%, 25%);
+        --dark-blue: hsl(213, 19%, 18%);
+        --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 15px;
+    background-color: var(--very-dark-blue);
+}
+
+@media screen and (min-width: 375px) {
+    .first-scene,
+    .second-scene {
+        display: none;
+        visibility: hidden;
+    }
+
+
+
+    .scene-active {
+        display: block;
+        visibility: visible;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--secondary-medium-grey);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-block-start: 20px;
+    }
+
+
+    .container { padding-inline: 20px; }
+
+    .card-container {
+        width: 325px;
+        height: 360px;
+        background-color: var(--dark-blue);
+        border-radius: 15px;
+    }
+
+    .content-title {
+        color: var(--white);
+        font-weight: 700;
+        font-size: 25px;
+        margin-block-start: 20px;
+    }
+
+    .content-paragraph {
+        font-weight: 400;
+        color: var(--Light-grey);
+        max-width: 295px;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-block-start: 15px;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        margin-block-start: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 45px;
+        height: 45px;
+        background-color: var(--secondary-medium-grey);
+        border-radius: 50%;
+        color: var(--medium-grey);
+        font-family: inherit;
+        font-weight: 700;
+        cursor: pointer;
+        transition: .15s ease-in-out;
+    }
+
+    .btn.selected {
+        background-color: var(--medium-grey);
+        color: var(--white);
+        margin-top: 0;
+        border-radius: 50%;
+    }
+
+    .btn:hover {
+        background-color: var(--orange);
+        color: var(--white);
+    }
+
+    .submit-button {
+        background-color: var(--orange);
+        padding: 15px 115px;
+        border-radius: 30px;
+        color: var(--white);
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-block-start: 20px;
+        cursor: pointer;   
+        transition: .15s ease-in-out;
+    }
+
+    .submit-button:hover {
+        background-color: var(--white);
+        color: var(--orange);
+    }
+
+    .second-scene {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-block-start: 30px;
+    }
+
+    .image img {
+        width: 140px;
+        height: auto;
+    }
+
+    .selected {
+        color: var(--orange);
+        background-color: var(--secondary-medium-grey);
+        padding: 7px 15px;
+        border-radius: 20px;
+        margin-block-start: 20px;
+    }
+
+    .second-content {
+        text-align: center;
+    }
+
+    .second-content .content-title {
+        margin-block-start: 30px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card-container {
+        width: 410px;
+        height: 415px;
+    }
+
+    .container {
+        padding-inline: 35px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        margin-block-start: 30px;
+    }
+
+    .content-title {
+        font-size: 30px;
+        margin-block-start: 30px;
+    }
+
+    .content-paragraph {
+        max-width: 340px;
+    }
+
+    .btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .buttons {
+        gap: 20px;
+    }
+
+    .submit-button {
+        padding: 17px 130px;
+        margin-block-start: 25px;
+    }
+}

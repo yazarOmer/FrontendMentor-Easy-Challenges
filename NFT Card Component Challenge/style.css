@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+:root {
+
+    /* primary colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* secondary colors */
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--very-dark-blue-main-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 25px;
+}
+
+.card {
+    width: 325px;
+    height: 545px;
+    background-color: var(--very-dark-blue-card-bg);
+    border-radius: 15px;
+}
+
+.card-image {
+    max-width: 275px;
+}
+
+.content-top {
+    border-bottom: 1px solid var(--very-dark-blue-line);
+}
+
+.title {
+    color: var(--white);
+    font-weight: 600;
+    margin-block-start: 17px;
+    margin-block-end: 10px;
+}
+
+.content {
+    color: var(--soft-blue);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-block-end: 15px;
+}
+
+.eth-data {
+    color: var(--cyan);
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.time-data {
+    color: var(--soft-blue);
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 9px;
+}
+
+.icon-eth {
+    width: 10px;
+    height: auto;
+}
+
+.icon-clock {
+    width: 14px;
+    height: auto;
+}
+
+.content-bottom {
+    display: flex;
+    align-items: center;
+    padding-block: 20px;
+}
+
+.bottom-data {
+    color: var(--soft-blue);
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.avatar {
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.white {
+    color: var(--white);
+}
+
+.card-image {
+    position: relative;
+    cursor: pointer;
+}
+
+.card-image:hover .overlay{
+    opacity: 0.6;
+}
+.card-image:hover .view {
+    opacity: 1;
+}
+
+:is(.title, .white):hover {
+    color: var(--cyan);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cyan);
+    opacity: 0;
+    border-radius: 10px;
+    max-height: 275px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease-in-out;
+}
+
+.view {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
